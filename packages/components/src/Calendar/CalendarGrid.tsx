@@ -1,11 +1,12 @@
 import { AriaCalendarGridProps, useCalendarGrid } from '@react-aria/calendar';
 import { useLocale } from '@react-aria/i18n';
-import { CalendarState, RangeCalendarState } from '@react-stately/calendar';
+import { CalendarState } from '@react-stately/calendar';
 import { getWeeksInMonth } from '@internationalized/date';
 import { CalendarCell } from './CalendarCell';
+import { Box } from '@marigold/system';
 
 export interface CalendarGridProps extends AriaCalendarGridProps {
-  state: CalendarState | RangeCalendarState;
+  state: CalendarState;
 }
 
 export const CalendarGrid = ({ state, ...props }: CalendarGridProps) => {
@@ -17,17 +18,22 @@ export const CalendarGrid = ({ state, ...props }: CalendarGridProps) => {
   );
 
   return (
-    <table {...gridProps} cellPadding="0">
-      <thead {...headerProps} color="gray">
-        <tr>
+    <Box as="table" {...gridProps} cellPadding="5" style={{ width: '100%' }}>
+      <Box as="thead" {...headerProps}>
+        <Box as="tr">
           {weekDays.map((day, index) => (
-            <th key={index}>{day}</th>
+            <th
+              style={{ fontWeight: 'bolder', fontFamily: 'Inter' }}
+              key={index}
+            >
+              {day}
+            </th>
           ))}
-        </tr>
-      </thead>
-      <tbody>
+        </Box>
+      </Box>
+      <Box as="tbody">
         {[...new Array(numberOfWeeksInMonth).keys()].map(weekIndex => (
-          <tr key={weekIndex}>
+          <Box as="tr" key={weekIndex}>
             {state
               .getDatesInWeek(weekIndex)
               .map((date, i) =>
@@ -38,12 +44,12 @@ export const CalendarGrid = ({ state, ...props }: CalendarGridProps) => {
                     state={state as CalendarState}
                   />
                 ) : (
-                  <td key={i} />
+                  <Box as="td" key={i} />
                 )
               )}
-          </tr>
+          </Box>
         ))}
-      </tbody>
-    </table>
+      </Box>
+    </Box>
   );
 };
