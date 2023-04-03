@@ -60,7 +60,6 @@ export const Calendar = ({ shadow = true, ...props }: CalendarProps) => {
         >
           <MonthDropdown state={state} />
           <YearsDropdown state={state} />
-          {/* <NomralYearDropdown state={state} /> */}
         </Box>
         <Box
           __baseCSS={{

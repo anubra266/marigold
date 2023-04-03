@@ -2,7 +2,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Calendar, CalendarProps } from './Calendar';
-import { DatePicker } from './DatePicker';
+import { DatePicker } from '../DatePicker';
 import { Box } from '@marigold/system';
 
 const meta = {
@@ -24,7 +24,6 @@ export const DatePickerField: Story = {
       <Box style={{ width: '350px' }}>
         <DatePicker
           label="date picker"
-          defaultOpen
           aria-label="date-picker"
           aria-describedby="this is date picker"
           aria-details="date-picker"
