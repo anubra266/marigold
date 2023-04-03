@@ -26,20 +26,23 @@ const YearsDropdown = ({ state }: YearDropdownProps) => {
 
   let onChange = (key: Key) => {
     let index = Number(key);
-    let date = years[index].value;
+    // let date = years[index].value;
+    let date = state.focusedDate.set({ year: index });
     state.setFocusedDate(date);
   };
 
   return (
-    <Box>
+    <Box style={{ zIndex: 1000 }}>
       <Select
         aria-label="year"
         onChange={onChange}
-        value={state.focusedDate.year}
         defaultSelectedKey="20"
+        value={state.focusedDate.toString()}
       >
         {years.map((year, i) => (
-          <Select.Option key={i}>{year.formatted}</Select.Option>
+          <Select.Option key={year.value.toString()}>
+            {year.formatted}
+          </Select.Option>
         ))}
       </Select>
     </Box>

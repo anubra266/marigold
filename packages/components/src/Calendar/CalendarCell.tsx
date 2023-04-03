@@ -19,11 +19,7 @@ export const CalendarCell = (props: CalendarCellProps) => {
     { parts: ['calendarCell'] }
   );
   return (
-    <Box
-      as="td"
-      // width="26"
-      {...cellProps}
-    >
+    <Box as="td" {...cellProps}>
       <Box style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
         <Box
           __baseCSS={{

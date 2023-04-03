@@ -9,14 +9,16 @@ import { Box, ThemeExtensionsWithParts } from '@marigold/system';
 import MonthDropdown from './MonthDropdown';
 import YearsDropdown from './YearsDropdown';
 
-export interface CalendarProps extends AriaCalendarProps<any> {}
+export interface CalendarProps extends AriaCalendarProps<any> {
+  shadow?: boolean;
+}
 export interface CalendarThemeExtension
   extends ThemeExtensionsWithParts<
     'Calendar',
     ['calendarGrid', 'calendarCell']
   > {}
 
-export const Calendar = (props: CalendarProps) => {
+export const Calendar = ({ shadow = true, ...props }: CalendarProps) => {
   const { locale } = useLocale();
   const state = useCalendarState({
     ...props,
@@ -33,8 +35,7 @@ export const Calendar = (props: CalendarProps) => {
   return (
     <Box
       __baseCSS={{
-        maxWidth: '360px',
-        boxShadow: '0px 4px 4px rgba(165, 165, 165, 0.25)',
+        boxShadow: shadow && '0px 4px 4px rgba(165, 165, 165, 0.25)',
         borderRadius: '16px',
         padding: '16px',
       }}

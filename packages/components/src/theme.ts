@@ -34,7 +34,8 @@ import type { TableThemeExtension } from './Table';
 import type { TextThemeExtension } from './Text';
 import type { TextAreaThemeExtension } from './TextArea';
 import type { TooltipThemeExtension } from './Tooltip';
-import { CalendarThemeExtension } from './Calendar';
+import { CalendarThemeExtension, DatePickerThemeExtension } from './Calendar';
+import { DateFieldThemeExtension } from './DateField';
 interface ComponentStyles
   extends AutocompleteThemeExtension,
     BadgeThemeExtension,
@@ -67,7 +68,9 @@ interface ComponentStyles
     TextAreaThemeExtension,
     TooltipThemeExtension,
     UnderlayThemeExtension,
-    CalendarThemeExtension {}
+    CalendarThemeExtension,
+    DateFieldThemeExtension,
+    DatePickerThemeExtension {}
 
 export interface Theme extends BaseTheme {
   components: ComponentStyles;
