@@ -38,6 +38,7 @@ export const Calendar = ({ shadow = true, ...props }: CalendarProps) => {
         boxShadow: shadow && '0px 4px 4px rgba(165, 165, 165, 0.25)',
         borderRadius: '16px',
         padding: '16px',
+        width: '360px',
       }}
       {...calendarProps}
       ref={ref}

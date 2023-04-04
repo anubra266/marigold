@@ -13,11 +13,7 @@ interface DateSegmentProps {
 export const DateSegment = ({ segment, state }: DateSegmentProps) => {
   const ref = useRef(null);
   const { segmentProps } = useDateSegment(segment, state, ref);
-  const styles = useComponentStyles(
-    'DateField',
-    {},
-    { parts: ['segment', 'placeholder'] }
-  );
+  const styles = useComponentStyles('DateField', {}, { parts: ['segment'] });
   return (
     <Box
       {...segmentProps}
@@ -36,6 +32,7 @@ export const DateSegment = ({ segment, state }: DateSegmentProps) => {
         borderRadius: '2px',
       }}
       css={styles.segment}
+      className={state.isDisabled ? 'disabled' : undefined}
     >
       <Box
         as="span"
@@ -48,7 +45,6 @@ export const DateSegment = ({ segment, state }: DateSegmentProps) => {
           width: '100%',
           textAlign: 'center',
         }}
-        css={styles.placeholder}
       >
         {segment.placeholder}
       </Box>

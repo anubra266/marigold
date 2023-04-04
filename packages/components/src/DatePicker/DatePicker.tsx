@@ -15,7 +15,6 @@ export interface DatePickerProps extends AriaDatePickerProps<CalendarDate> {}
 export const DatePicker = (props: DatePickerProps) => {
   const state = useDatePickerState({
     ...props,
-    // isOpen: true,
     shouldCloseOnSelect: false,
   });
   const ref = useRef(null);
@@ -24,6 +23,7 @@ export const DatePicker = (props: DatePickerProps) => {
     state,
     ref
   );
+  const { isDisabled, errorMessage, description } = props;
   return (
     <Box>
       <Box __baseCSS={{ display: 'flex' }} {...groupProps} ref={ref}>
@@ -39,9 +39,11 @@ export const DatePicker = (props: DatePickerProps) => {
             label={props.label}
             isPressed={state.isOpen}
             isOpen={true}
+            isDisabled={isDisabled}
+            errorMessage={errorMessage}
+            description={description}
           />
         </Box>
-        <Box></Box>
       </Box>
       {state.isOpen && (
         <Popover triggerRef={ref} state={state}>

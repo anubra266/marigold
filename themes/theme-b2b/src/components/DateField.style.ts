@@ -3,13 +3,19 @@ import { Theme } from '@marigold/components';
 export const DateField: Theme['components']['DateField'] = {
   base: {
     field: {
-      '&.focus': {
-        borderColor: 'primary',
-      },
       border: '1px solid',
       borderColor: 'gray40',
-      ':focus-within': {
-        borderColor: 'primary',
+      outline: 'none',
+      '&.focus, :focus-within': {
+        outline: `1px solid`,
+        outlineColor: 'orange60',
+      },
+      '&.disabled': {
+        backgroundColor: '#F1F1F1',
+        cursor: 'not-allowed',
+      },
+      '&:error': {
+        display: 'none',
       },
     },
     segment: {
@@ -20,22 +26,21 @@ export const DateField: Theme['components']['DateField'] = {
           color: 'white',
         },
       },
-    },
-    placeholder: {
-      color: 'gray70',
+      '&.disabled': {
+        color: 'gray40',
+      },
     },
     calendarButton: {
-      '&.isPressed': {
+      '& button:not(:disabled):hover': {
         backgroundColor: 'gray50',
+      },
+      '& button:not(:disabled):hover, & button:focus, &.isPressed': {
         '& svg': {
           color: 'white',
         },
       },
-      '& button:hover': {
-        backgroundColor: 'gray50',
-        '& svg': {
-          color: 'white',
-        },
+      '& button:focus, &.isPressed': {
+        background: 'gray80',
       },
     },
   },
