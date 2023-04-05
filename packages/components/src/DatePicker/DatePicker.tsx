@@ -10,9 +10,27 @@ import { CalendarDate } from '@internationalized/date';
 export interface DatePickerThemeExtension
   extends ThemeExtensionsWithParts<'DatePicker', ['field', 'fieldButton']> {}
 
-export interface DatePickerProps extends AriaDatePickerProps<CalendarDate> {}
+export interface DatePickerProps
+  extends Omit<
+    AriaDatePickerProps<CalendarDate>,
+    'isDisabled' | 'isRequired' | 'isReadOnly'
+  > {
+  disabled?: boolean;
+  required?: boolean;
+  readonly?: boolean;
+}
 
-export const DatePicker = (props: DatePickerProps) => {
+export const DatePicker = ({
+  disabled,
+  required,
+  readonly,
+  ...res
+}: DatePickerProps) => {
+  const props: AriaDatePickerProps<CalendarDate> = {
+    isDisabled: disabled,
+    isReadOnly: readonly,
+    isRequired: required,
+  };
   const state = useDatePickerState({
     ...props,
     shouldCloseOnSelect: false,
@@ -23,7 +41,7 @@ export const DatePicker = (props: DatePickerProps) => {
     state,
     ref
   );
-  const { isDisabled, errorMessage, description } = props;
+  const { isDisabled, errorMessage, description, label } = props;
   return (
     <Box>
       <Box __baseCSS={{ display: 'flex' }} {...groupProps} ref={ref}>
@@ -36,10 +54,10 @@ export const DatePicker = (props: DatePickerProps) => {
             {...fieldProps}
             showIconRight
             buttonProps={buttonProps}
-            label={props.label}
+            label={label}
             isPressed={state.isOpen}
             isOpen={true}
-            isDisabled={isDisabled}
+            disabled={isDisabled}
             errorMessage={errorMessage}
             description={description}
           />

@@ -6,7 +6,14 @@ const meta = {
   title: 'Components/DatePicker',
   component: DatePicker,
   argTypes: {
-    isDisabled: {
+    disabled: {
+      control: {
+        type: 'boolean',
+      },
+      description: 'Disable the date picker',
+      defaultValue: false,
+    },
+    required: {
       control: {
         type: 'boolean',
       },

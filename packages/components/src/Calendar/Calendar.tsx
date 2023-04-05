@@ -5,9 +5,11 @@ import { useLocale } from '@react-aria/i18n';
 import { createCalendar } from '@internationalized/date';
 import { Button } from '../Button';
 import { CalendarGrid } from './CalendarGrid';
-import { Box, ThemeExtensionsWithParts } from '@marigold/system';
-import MonthDropdown from './MonthDropdown';
-import YearsDropdown from './YearsDropdown';
+import {
+  Box,
+  ThemeExtensionsWithParts,
+  useComponentStyles,
+} from '@marigold/system';
 
 export interface CalendarProps extends AriaCalendarProps<any> {
   shadow?: boolean;
@@ -15,7 +17,7 @@ export interface CalendarProps extends AriaCalendarProps<any> {
 export interface CalendarThemeExtension
   extends ThemeExtensionsWithParts<
     'Calendar',
-    ['calendarGrid', 'calendarCell']
+    ['calendarGrid', 'calendarCell', 'arrowButton']
   > {}
 
 export const Calendar = ({ shadow = true, ...props }: CalendarProps) => {
@@ -31,7 +33,7 @@ export const Calendar = ({ shadow = true, ...props }: CalendarProps) => {
     props,
     state
   );
-
+  const styles = useComponentStyles('Calendar', {}, { parts: ['arrowButton'] });
   return (
     <Box
       __baseCSS={{
@@ -55,26 +57,17 @@ export const Calendar = ({ shadow = true, ...props }: CalendarProps) => {
         <Box
           __baseCSS={{
             display: 'flex',
-            gap: '9px',
-            '& button': { borderRadius: '10px', height: '40px' },
-          }}
-        >
-          <MonthDropdown state={state} />
-          <YearsDropdown state={state} />
-        </Box>
-        <Box
-          __baseCSS={{
-            display: 'flex',
             flexWrap: 'nowrap',
             gap: 39,
           }}
+          css={styles.arrowButton}
         >
-          <Button {...prevButtonProps} style={{ padding: '0' }}>
+          <Button {...prevButtonProps}>
             <svg width="20" height="20" viewBox="0 0 24 24">
               <path d="M16.8506 18.0244L10.8394 12L16.8506 5.97563L15 4.125L7.125 12L15 19.875L16.8506 18.0244Z"></path>
             </svg>
           </Button>
-          <Button {...nextButtonProps} style={{ padding: '0' }}>
+          <Button {...nextButtonProps}>
             <svg width="20" height="20" viewBox="0 0 24 24">
               <path d="M7.125 18.0244L13.1363 12L7.125 5.97563L8.97563 4.125L16.8506 12L8.97563 19.875L7.125 18.0244Z"></path>
             </svg>

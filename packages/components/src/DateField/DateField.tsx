@@ -7,12 +7,13 @@ import {
   Box,
   ThemeExtensionsWithParts,
   useComponentStyles,
+  useStateProps,
 } from '@marigold/system';
 import { DateSegment } from './DateSegment';
-import { Label } from '../Label';
 import { Button } from '../Button';
 import { AriaButtonProps } from '@react-aria/button';
-import { HelpText } from '../HelpText';
+import { FieldBase } from '../FieldBase';
+import { mergeProps } from '@react-aria/utils';
 
 export interface DateFieldThemeExtension
   extends ThemeExtensionsWithParts<
@@ -20,30 +21,37 @@ export interface DateFieldThemeExtension
     ['segment', 'placeholder', 'field', 'calendarButton']
   > {}
 
-export interface DateFieldProps extends AriaDateFieldProps<DateValue> {
+export interface DateFieldProps
+  extends Omit<AriaDateFieldProps<DateValue>, 'isDisabled' | 'isReadOnly'> {
   showIconRight?: boolean;
   showIconLeft?: boolean;
   buttonProps?: AriaButtonProps<'button'>;
   isPressed?: boolean;
   error?: boolean;
   errorMessageProps?: HTMLAttributes<HTMLElement>;
+  disabled?: boolean;
+  readonly?: boolean;
 }
 
 export const DateField = ({
   showIconLeft = false,
   showIconRight = false,
+  disabled,
+  readonly,
   isPressed,
-  ...props
+  error,
+  errorMessage,
+  errorMessageProps,
+  buttonProps,
+  ...res
 }: DateFieldProps) => {
   const { locale } = useLocale();
-  const {
-    label,
-    isDisabled,
-    description,
-    error,
-    errorMessage,
-    errorMessageProps,
-  } = props;
+  const props: AriaDateFieldProps<DateValue> = {
+    isDisabled: disabled,
+    isReadOnly: readonly,
+    ...res,
+  };
+  const { label, isDisabled, description } = props;
   const state = useDateFieldState({
     ...props,
     locale,
@@ -56,14 +64,24 @@ export const DateField = ({
     {},
     { parts: ['segment', 'placeholder', 'field', 'calendarButton'] }
   );
+
+  const stateProps = useStateProps({
+    error,
+    disabled: isDisabled,
+    focus: isPressed,
+  });
   return (
-    <Box
-      __baseCSS={{
-        display: 'flex',
-        flexDirection: 'column',
-      }}
+    <FieldBase
+      error={error}
+      errorMessage={errorMessage}
+      label={label}
+      labelProps={{ as: 'span', ...labelProps }}
+      description={description}
+      disabled={isDisabled}
+      errorMessageProps={errorMessageProps}
+      stateProps={stateProps}
+      {...props}
     >
-      <Label {...labelProps}>{label}</Label>
       <Box
         __baseCSS={{
           display: 'flex',
@@ -73,10 +91,7 @@ export const DateField = ({
           borderRadius: '10px',
           overflow: 'hidden',
         }}
-        {...fieldProps}
-        className={`${isPressed ? 'focus' : undefined} ${
-          isDisabled ? 'disabled' : undefined
-        }`}
+        {...mergeProps(fieldProps, stateProps)}
         css={styles.field}
       >
         <Box
@@ -129,7 +144,7 @@ export const DateField = ({
             css={styles.calendarButton}
           >
             <Button
-              {...props.buttonProps}
+              {...buttonProps}
               style={{
                 padding: '4px 7px',
                 width: '40px',
@@ -143,15 +158,6 @@ export const DateField = ({
           </Box>
         )}
       </Box>
-      <Box>
-        <HelpText
-          description={description}
-          errorMessage={errorMessage}
-          error={error}
-          data-error={false}
-          errorMessageProps={errorMessageProps}
-        />
-      </Box>
-    </Box>
+    </FieldBase>
   );
 };

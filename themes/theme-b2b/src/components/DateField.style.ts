@@ -6,16 +6,16 @@ export const DateField: Theme['components']['DateField'] = {
       border: '1px solid',
       borderColor: 'gray40',
       outline: 'none',
-      '&.focus, :focus-within': {
+      '&[data-focus], :focus-within': {
         outline: `1px solid`,
         outlineColor: 'orange60',
       },
-      '&.disabled': {
+      '&[data-disabled]': {
         backgroundColor: '#F1F1F1',
         cursor: 'not-allowed',
       },
       '&:error': {
-        display: 'none',
+        borderColor: 'red60',
       },
     },
     segment: {
