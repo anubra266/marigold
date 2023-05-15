@@ -91,10 +91,10 @@ export const WithLabel: Story = {
 export const RemovableTags: Story = {
   render: args => {
     let defaultItems = [
-      { id: 1, name: 'News' },
-      { id: 2, name: 'Travel' },
-      { id: 3, name: 'Gaming' },
-      { id: 4, name: 'Shopping' },
+      { value: 1, label: 'News' },
+      { value: 2, label: 'Travel' },
+      { value: 3, label: 'Gaming' },
+      { value: 4, label: 'Shopping' },
     ];
 
     let [items, setItems] =
