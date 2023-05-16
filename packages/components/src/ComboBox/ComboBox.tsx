@@ -34,9 +34,9 @@ export interface ComboBoxProps
   readOnly?: boolean;
   defaultValue?: ComboBoxPropsI<object>['defaultInputValue'];
   value?: ComboBoxPropsI<object>['inputValue'];
-  options?: any[];
+  options: any[];
   setOptions?: any;
-  mappedOptions?: any[];
+  mappedOptions: any[];
   selectedItemsList?: any[];
   onChange?: ComboBoxPropsI<object>['onInputChange'];
 }
@@ -73,7 +73,7 @@ export const ComboBox = ({
     onSelectionChange: value => {
       setSelectedItems(prevItems => [
         ...prevItems,
-        { id: value, label: mappedOptions[value] },
+        { id: value, label: mappedOptions[value as any] },
       ]);
     },
     defaultFilter: contains,
@@ -103,20 +103,15 @@ export const ComboBox = ({
     );
   };
   useEffect(() => {
-    const filteredArr = options?.filter(option => {
-      console.log('option.id', option.id);
-      console.log('selectedItems', selectedItems);
-      return selectedItems.some(selectedItem => {
-        return option.id !== selectedItem.id;
-      });
+    const currentOptions = options.filter(function (option) {
+      // return selectedItems.some(function (selectedItem) {
+      //   return String(option.id) != String(selectedItem.id);
+      // });
     });
-    console.log('selectedItems.length', filteredArr);
     if (selectedItems?.length > 0) {
-      setOptions(filteredArr);
+      setOptions(currentOptions);
     }
   }, [selectedItems]);
-  console.log(options);
-  console.log(selectedItems);
 
   return (
     <>
