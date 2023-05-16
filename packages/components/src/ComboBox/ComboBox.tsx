@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, Key } from 'react';
 import { useComboBoxState } from '@react-stately/combobox';
 import { useComboBox } from '@react-aria/combobox';
 import { ComboBoxProps as ComboBoxPropsI } from '@react-types/combobox';
@@ -36,6 +36,7 @@ export interface ComboBoxProps
   value?: ComboBoxPropsI<object>['inputValue'];
   options?: any[];
   setOptions?: any;
+  mappedOptions?: any[];
   selectedItemsList?: any[];
   onChange?: ComboBoxPropsI<object>['onInputChange'];
 }
@@ -50,16 +51,12 @@ export const ComboBox = ({
   value,
   setOptions,
   options,
+  mappedOptions,
   selectedItemsList = [],
   onChange,
   ...rest
 }: ComboBoxProps) => {
   const [selectedItems, setSelectedItems] = useState(selectedItemsList);
-  const mappedItems = options?.reduce((acc, obj) => {
-    return { [obj.id]: obj.name };
-  }, []);
-  console.log('mappedItems', mappedItems);
-  useEffect(() => {}, [selectedItems]);
   const props: ComboBoxPropsI<object> = {
     isDisabled: disabled,
     isRequired: required,
@@ -74,7 +71,10 @@ export const ComboBox = ({
   const state = useComboBoxState({
     ...props,
     onSelectionChange: value => {
-      setSelectedItems(prevItems => [...prevItems, value]);
+      setSelectedItems(prevItems => [
+        ...prevItems,
+        { id: value, label: mappedOptions[value] },
+      ]);
     },
     defaultFilter: contains,
   });
@@ -104,28 +104,32 @@ export const ComboBox = ({
   };
   useEffect(() => {
     const filteredArr = options?.filter(option => {
-      return !selectedItems.includes(option.id);
+      console.log('option.id', option.id);
+      console.log('selectedItems', selectedItems);
+      return selectedItems.some(selectedItem => {
+        return option.id !== selectedItem.id;
+      });
     });
-    setOptions([...filteredArr]);
-    console.log(options);
+    console.log('selectedItems.length', filteredArr);
+    if (selectedItems?.length > 0) {
+      setOptions(filteredArr);
+    }
   }, [selectedItems]);
+  console.log(options);
+  console.log(selectedItems);
+
   return (
     <>
-      <Tag.Group
-        items={options}
-        aria-label="selected items"
-        allowsRemoving
-        onRemove={removeItem}
-      >
-        {item => {
-          console.log('item', item);
-          return selectedItems.includes(item.id) ? (
-            <Tag>{item.label}</Tag>
-          ) : (
-            <Tag>s</Tag>
-          );
-        }}
-      </Tag.Group>
+      {selectedItems.length > 0 && (
+        <Tag.Group
+          items={selectedItems}
+          aria-label="TagGrooup removing example"
+          allowsRemoving
+          onRemove={removeItem}
+        >
+          {(item: { id: number; label: string }) => <Tag>{item.label}</Tag>}
+        </Tag.Group>
+      )}
       <FieldBase
         label={label}
         labelProps={labelProps}
@@ -163,20 +167,22 @@ export const ComboBox = ({
 
 export const XComponent = ({ options, ...props }: ComboBoxProps) => {
   const [optionsList, setOptionsList] = useState(options);
-
-  useEffect(() => {
-    // console.log("optionsList", optionsList)
-  }, [optionsList]);
+  const mappedOptions = options?.reduce((acc, option) => {
+    acc[option.id] = option.label;
+    return acc;
+  }, {});
   return (
     <>
       <ComboBox
         options={optionsList}
         setOptions={setOptionsList}
         defaultItems={optionsList}
+        mappedOptions={mappedOptions}
         {...props}
-        // label="Animals"
       >
-        {item => <Item key={item.value}>{item.label}</Item>}
+        {(item: { value: any; label: any }) => (
+          <Item key={item.value}>{item.label}</Item>
+        )}
       </ComboBox>
     </>
   );
