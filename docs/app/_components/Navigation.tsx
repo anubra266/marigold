@@ -6,6 +6,7 @@ import { allContentPages } from 'contentlayer/generated';
 
 import { siteConfig } from '@/lib/config';
 import { NavLink } from './NavLink';
+import { CommandMenu } from './CommandMenu';
 
 // Types
 // ---------------
@@ -25,7 +26,7 @@ interface NavigationSection {
   subsections: NavigationSubsection[];
 }
 
-const useNavigation = (): NavigationSection[] => {
+export const useNavigation = (): NavigationSection[] => {
   const navigation = siteConfig.navigation;
 
   return navigation.map(({ name, slug, subsections = [] }) => {
@@ -65,12 +66,14 @@ export interface NavigationProps {
 
 // Compponent
 // ---------------
+
 export const Navigation = ({ onClick }: NavigationProps) => {
   const pathname = usePathname();
   const navigation = useNavigation();
 
   return (
     <nav className="mb-12 flex flex-col gap-10 pl-4 pr-11 pt-8">
+      <CommandMenu />
       {navigation.map(section => (
         <div key={section.name} className="flex flex-col gap-2">
           <div className="font-semibold">{section.name}</div>
