@@ -1,0 +1,25 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "_sc_client_content_components_layout_aside_space_demo_tsx";
+exports.ids = ["_sc_client_content_components_layout_aside_space_demo_tsx"];
+exports.modules = {
+
+/***/ "(sc_client)/./content/components/layout/aside/space.demo.tsx":
+/*!********************************************************!*\
+  !*** ./content/components/layout/aside/space.demo.tsx ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _marigold_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @marigold/components */ \"(sc_client)/../packages/components/src/Aside/Aside.tsx\");\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (()=>/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_marigold_components__WEBPACK_IMPORTED_MODULE_1__.Aside, {\n        space: 5,\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: \"h-28 w-14 border border-slate-300 bg-slate-300\"\n            }, void 0, false, {\n                fileName: \"/Users/sebastian/Projects/marigold/docs/content/components/layout/aside/space.demo.tsx\",\n                lineNumber: 5,\n                columnNumber: 5\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: \"h-28 w-full border border-slate-300 bg-slate-300\"\n            }, void 0, false, {\n                fileName: \"/Users/sebastian/Projects/marigold/docs/content/components/layout/aside/space.demo.tsx\",\n                lineNumber: 6,\n                columnNumber: 5\n            }, undefined)\n        ]\n    }, void 0, true, {\n        fileName: \"/Users/sebastian/Projects/marigold/docs/content/components/layout/aside/space.demo.tsx\",\n        lineNumber: 4,\n        columnNumber: 3\n    }, undefined));\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNjX2NsaWVudCkvLi9jb250ZW50L2NvbXBvbmVudHMvbGF5b3V0L2FzaWRlL3NwYWNlLmRlbW8udHN4IiwibWFwcGluZ3MiOiI7Ozs7Ozs7O0FBQTZDO0FBRTdDLGlFQUFlLGtCQUNiLDhEQUFDQSx1REFBS0E7UUFBQ0MsT0FBTzs7MEJBQ1osOERBQUNDO2dCQUFJQyxXQUFVOzs7Ozs7MEJBQ2YsOERBQUNEO2dCQUFJQyxXQUFVOzs7Ozs7Ozs7OztpQkFFbkIsRUFBRSIsInNvdXJjZXMiOlsid2VicGFjazovL0BtYXJpZ29sZC9kb2NzLy4vY29udGVudC9jb21wb25lbnRzL2xheW91dC9hc2lkZS9zcGFjZS5kZW1vLnRzeD8zNTI3Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEFzaWRlIH0gZnJvbSAnQG1hcmlnb2xkL2NvbXBvbmVudHMnO1xuXG5leHBvcnQgZGVmYXVsdCAoKSA9PiAoXG4gIDxBc2lkZSBzcGFjZT17NX0+XG4gICAgPGRpdiBjbGFzc05hbWU9XCJoLTI4IHctMTQgYm9yZGVyIGJvcmRlci1zbGF0ZS0zMDAgYmctc2xhdGUtMzAwXCIgLz5cbiAgICA8ZGl2IGNsYXNzTmFtZT1cImgtMjggdy1mdWxsIGJvcmRlciBib3JkZXItc2xhdGUtMzAwIGJnLXNsYXRlLTMwMFwiIC8+XG4gIDwvQXNpZGU+XG4pO1xuIl0sIm5hbWVzIjpbIkFzaWRlIiwic3BhY2UiLCJkaXYiLCJjbGFzc05hbWUiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(sc_client)/./content/components/layout/aside/space.demo.tsx\n");
+
+/***/ })
+
+};
+;

@@ -1,0 +1,365 @@
+{
+  "ssrModuleMapping": {
+    "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/error-boundary.js": {
+      "*": {
+        "id": "(sc_client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/error-boundary.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/app-router.js": {
+      "*": {
+        "id": "(sc_client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/app-router.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/layout-router.js": {
+      "*": {
+        "id": "(sc_client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/layout-router.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/render-from-template-context.js": {
+      "*": {
+        "id": "(sc_client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/render-from-template-context.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js": {
+      "*": {
+        "id": "(sc_client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./ui/index.ts": {
+      "*": {
+        "id": "(sc_client)/./ui/index.ts",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./ui/ThemeSwitch.tsx": {
+      "*": {
+        "id": "(sc_client)/./ui/ThemeSwitch.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./theme/index.ts": {
+      "*": {
+        "id": "(sc_client)/./theme/index.ts",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/_components/Navigation.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/_components/Navigation.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/_components/Analytics.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/_components/Analytics.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/_components/MobileNavigation.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/_components/MobileNavigation.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/_components/ThemeMenu.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/_components/ThemeMenu.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/shared/lib/lazy-dynamic/dynamic-no-ssr.js": {
+      "*": {
+        "id": "(sc_client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/shared/lib/lazy-dynamic/dynamic-no-ssr.js",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./ui/mdx.tsx": {
+      "*": {
+        "id": "(sc_client)/./ui/mdx.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    }
+  },
+  "edgeSSRModuleMapping": {},
+  "clientModules": {
+    "/Users/sebastian/Projects/marigold/node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/error-boundary.js": {
+      "id": "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/error-boundary.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/esm/client/components/error-boundary.js": {
+      "id": "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/error-boundary.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/app-router.js": {
+      "id": "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/app-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/esm/client/components/app-router.js": {
+      "id": "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/app-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/layout-router.js": {
+      "id": "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/layout-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/esm/client/components/layout-router.js": {
+      "id": "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/layout-router.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/render-from-template-context.js": {
+      "id": "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/esm/client/components/render-from-template-context.js": {
+      "id": "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/render-from-template-context.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js": {
+      "id": "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/esm/client/components/static-generation-searchparams-bailout-provider.js": {
+      "id": "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/client/components/static-generation-searchparams-bailout-provider.js",
+      "name": "*",
+      "chunks": [
+        "app-client-internals:static/chunks/app-client-internals.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/docs/ui/index.ts": {
+      "id": "(app-client)/./ui/index.ts",
+      "name": "*",
+      "chunks": [
+        "app/[...slug]/page:static/chunks/app/[...slug]/page.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/docs/ui/ThemeSwitch.tsx": {
+      "id": "(app-client)/./ui/ThemeSwitch.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/docs/theme/index.ts": {
+      "id": "(app-client)/./theme/index.ts",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/docs/app/_components/Navigation.tsx": {
+      "id": "(app-client)/./app/_components/Navigation.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/docs/app/_components/Analytics.tsx": {
+      "id": "(app-client)/./app/_components/Analytics.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/docs/app/_components/MobileNavigation.tsx": {
+      "id": "(app-client)/./app/_components/MobileNavigation.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/docs/app/_components/ThemeMenu.tsx": {
+      "id": "(app-client)/./app/_components/ThemeMenu.tsx",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/docs/app/globals.css": {
+      "id": "(app-client)/./app/globals.css",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/themes/theme-b2b/dist/styles.css": {
+      "id": "(app-client)/../themes/theme-b2b/dist/styles.css",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/themes/theme-core/dist/styles.css": {
+      "id": "(app-client)/../themes/theme-core/dist/styles.css",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/font/google/target.css?{\"path\":\"theme/fonts.ts\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-sans\"}],\"variableName\":\"fontSans\"}": {
+      "id": "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/font/google/target.css?{\"path\":\"theme/fonts.ts\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"],\"variable\":\"--font-sans\"}],\"variableName\":\"fontSans\"}",
+      "name": "*",
+      "chunks": [
+        "app/layout:static/chunks/app/layout.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/shared/lib/app-router-context.js": {
+      "id": "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "*",
+      "chunks": [
+        "app/[...slug]/page:static/chunks/app/[...slug]/page.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/esm/shared/lib/app-router-context.js": {
+      "id": "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/shared/lib/app-router-context.js",
+      "name": "*",
+      "chunks": [
+        "app/[...slug]/page:static/chunks/app/[...slug]/page.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/shared/lib/hooks-client-context.js": {
+      "id": "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/shared/lib/hooks-client-context.js",
+      "name": "*",
+      "chunks": [
+        "app/[...slug]/page:static/chunks/app/[...slug]/page.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/esm/shared/lib/hooks-client-context.js": {
+      "id": "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/shared/lib/hooks-client-context.js",
+      "name": "*",
+      "chunks": [
+        "app/[...slug]/page:static/chunks/app/[...slug]/page.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/shared/lib/server-inserted-html.js": {
+      "id": "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/shared/lib/server-inserted-html.js",
+      "name": "*",
+      "chunks": [
+        "app/[...slug]/page:static/chunks/app/[...slug]/page.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/esm/shared/lib/server-inserted-html.js": {
+      "id": "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/shared/lib/server-inserted-html.js",
+      "name": "*",
+      "chunks": [
+        "app/[...slug]/page:static/chunks/app/[...slug]/page.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/shared/lib/lazy-dynamic/dynamic-no-ssr.js": {
+      "id": "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/shared/lib/lazy-dynamic/dynamic-no-ssr.js",
+      "name": "*",
+      "chunks": [
+        "app/[...slug]/page:static/chunks/app/[...slug]/page.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/esm/shared/lib/lazy-dynamic/dynamic-no-ssr.js": {
+      "id": "(app-client)/../node_modules/.pnpm/next@13.4.8_@babel+core@7.21.8_@opentelemetry+api@1.4.1_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/shared/lib/lazy-dynamic/dynamic-no-ssr.js",
+      "name": "*",
+      "chunks": [
+        "app/[...slug]/page:static/chunks/app/[...slug]/page.js"
+      ],
+      "async": false
+    },
+    "/Users/sebastian/Projects/marigold/docs/ui/mdx.tsx": {
+      "id": "(app-client)/./ui/mdx.tsx",
+      "name": "*",
+      "chunks": [
+        "app/[...slug]/page:static/chunks/app/[...slug]/page.js"
+      ],
+      "async": false
+    }
+  },
+  "entryCSSFiles": {
+    "/Users/sebastian/Projects/marigold/docs/app/layout": [
+      "static/css/app/layout.css"
+    ],
+    "/Users/sebastian/Projects/marigold/docs/app/[...slug]/page": []
+  }
+}

@@ -1,0 +1,25 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "_sc_client_content_components_form_textfield_textfield-number_demo_tsx";
+exports.ids = ["_sc_client_content_components_form_textfield_textfield-number_demo_tsx"];
+exports.modules = {
+
+/***/ "(sc_client)/./content/components/form/textfield/textfield-number.demo.tsx":
+/*!*********************************************************************!*\
+  !*** ./content/components/form/textfield/textfield-number.demo.tsx ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _marigold_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @marigold/components */ \"(sc_client)/../packages/components/src/TextField/TextField.tsx\");\n\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (()=>{\n    const [value, setValue] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(\"\");\n    const error = value.length > 0 && !/^\\d+$/.test(value);\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_marigold_components__WEBPACK_IMPORTED_MODULE_2__.TextField, {\n        label: \"Promo Code\",\n        description: \"You'll find your promo code on the back of your ticket.\",\n        errorMessage: \"Your promo code is not valid! Please review your input.\",\n        value: value,\n        onChange: setValue,\n        error: error,\n        inputMode: \"numeric\",\n        pattern: \"[0-9]*\"\n    }, void 0, false, {\n        fileName: \"/Users/sebastian/Projects/marigold/docs/content/components/form/textfield/textfield-number.demo.tsx\",\n        lineNumber: 10,\n        columnNumber: 5\n    }, undefined);\n});\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNjX2NsaWVudCkvLi9jb250ZW50L2NvbXBvbmVudHMvZm9ybS90ZXh0ZmllbGQvdGV4dGZpZWxkLW51bWJlci5kZW1vLnRzeCIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0FBQWlDO0FBRWdCO0FBRWpELGlFQUFlO0lBQ2IsTUFBTSxDQUFDRSxPQUFPQyxTQUFTLEdBQUdILCtDQUFRQSxDQUFTO0lBQzNDLE1BQU1JLFFBQVFGLE1BQU1HLE1BQU0sR0FBRyxLQUFLLENBQUMsUUFBUUMsSUFBSSxDQUFDSjtJQUVoRCxxQkFDRSw4REFBQ0QsMkRBQVNBO1FBQ1JNLE9BQU07UUFDTkMsYUFBWTtRQUNaQyxjQUFhO1FBQ2JQLE9BQU9BO1FBQ1BRLFVBQVVQO1FBQ1ZDLE9BQU9BO1FBQ1BPLFdBQVU7UUFDVkMsU0FBUTs7Ozs7O0FBR2QsR0FBRSIsInNvdXJjZXMiOlsid2VicGFjazovL0BtYXJpZ29sZC9kb2NzLy4vY29udGVudC9jb21wb25lbnRzL2Zvcm0vdGV4dGZpZWxkL3RleHRmaWVsZC1udW1iZXIuZGVtby50c3g/YzRlYSJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VTdGF0ZSB9IGZyb20gJ3JlYWN0JztcblxuaW1wb3J0IHsgVGV4dEZpZWxkIH0gZnJvbSAnQG1hcmlnb2xkL2NvbXBvbmVudHMnO1xuXG5leHBvcnQgZGVmYXVsdCAoKSA9PiB7XG4gIGNvbnN0IFt2YWx1ZSwgc2V0VmFsdWVdID0gdXNlU3RhdGU8c3RyaW5nPignJyk7XG4gIGNvbnN0IGVycm9yID0gdmFsdWUubGVuZ3RoID4gMCAmJiAhL15cXGQrJC8udGVzdCh2YWx1ZSk7XG5cbiAgcmV0dXJuIChcbiAgICA8VGV4dEZpZWxkXG4gICAgICBsYWJlbD1cIlByb21vIENvZGVcIlxuICAgICAgZGVzY3JpcHRpb249XCJZb3UnbGwgZmluZCB5b3VyIHByb21vIGNvZGUgb24gdGhlIGJhY2sgb2YgeW91ciB0aWNrZXQuXCJcbiAgICAgIGVycm9yTWVzc2FnZT1cIllvdXIgcHJvbW8gY29kZSBpcyBub3QgdmFsaWQhIFBsZWFzZSByZXZpZXcgeW91ciBpbnB1dC5cIlxuICAgICAgdmFsdWU9e3ZhbHVlfVxuICAgICAgb25DaGFuZ2U9e3NldFZhbHVlfVxuICAgICAgZXJyb3I9e2Vycm9yfVxuICAgICAgaW5wdXRNb2RlPVwibnVtZXJpY1wiXG4gICAgICBwYXR0ZXJuPVwiWzAtOV0qXCJcbiAgICAvPlxuICApO1xufTtcbiJdLCJuYW1lcyI6WyJ1c2VTdGF0ZSIsIlRleHRGaWVsZCIsInZhbHVlIiwic2V0VmFsdWUiLCJlcnJvciIsImxlbmd0aCIsInRlc3QiLCJsYWJlbCIsImRlc2NyaXB0aW9uIiwiZXJyb3JNZXNzYWdlIiwib25DaGFuZ2UiLCJpbnB1dE1vZGUiLCJwYXR0ZXJuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(sc_client)/./content/components/form/textfield/textfield-number.demo.tsx\n");
+
+/***/ })
+
+};
+;

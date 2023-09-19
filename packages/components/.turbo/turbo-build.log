@@ -1,0 +1,20 @@
+
+> @marigold/components@6.2.5 build /Users/sebastian/Projects/marigold/packages/components
+> tsup src/index.ts
+
+CLI Building entry: src/index.ts
+CLI Using tsconfig: tsconfig.build.json
+CLI tsup v7.2.0
+CLI Using tsup config: /Users/sebastian/Projects/marigold/packages/components/tsup.config.json
+CLI Target: es2018
+CLI Cleaning output folder
+ESM Build start
+CJS Build start
+CJS dist/index.js 154.64 KB
+CJS ⚡️ Build success in 55ms
+ESM dist/index.mjs 139.42 KB
+ESM ⚡️ Build success in 55ms
+DTS Build start
+DTS ⚡️ Build success in 2498ms
+DTS dist/index.d.mts 31.71 KB
+DTS dist/index.d.ts  31.71 KB

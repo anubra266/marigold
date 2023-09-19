@@ -1,0 +1,20 @@
+
+> @marigold/icons@1.2.14 build /Users/sebastian/Projects/marigold/packages/icons
+> tsup src/index.ts
+
+CLI Building entry: src/index.ts
+CLI Using tsconfig: tsconfig.build.json
+CLI tsup v7.2.0
+CLI Using tsup config: /Users/sebastian/Projects/marigold/packages/icons/tsup.config.json
+CLI Target: es2018
+CLI Cleaning output folder
+ESM Build start
+CJS Build start
+ESM dist/index.mjs 106.58 KB
+ESM ⚡️ Build success in 50ms
+CJS dist/index.js 117.22 KB
+CJS ⚡️ Build success in 51ms
+DTS Build start
+DTS ⚡️ Build success in 1474ms
+DTS dist/index.d.mts 12.90 KB
+DTS dist/index.d.ts  12.90 KB

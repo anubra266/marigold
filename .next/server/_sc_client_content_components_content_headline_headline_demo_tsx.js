@@ -1,0 +1,25 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "_sc_client_content_components_content_headline_headline_demo_tsx";
+exports.ids = ["_sc_client_content_components_content_headline_headline_demo_tsx"];
+exports.modules = {
+
+/***/ "(sc_client)/./content/components/content/headline/headline.demo.tsx":
+/*!***************************************************************!*\
+  !*** ./content/components/content/headline/headline.demo.tsx ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _marigold_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @marigold/components */ \"(sc_client)/../packages/components/src/Body/Body.tsx\");\n/* harmony import */ var _marigold_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @marigold/components */ \"(sc_client)/../packages/components/src/Headline/Headline.tsx\");\n/* harmony import */ var _marigold_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @marigold/components */ \"(sc_client)/../packages/components/src/Text/Text.tsx\");\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (()=>/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_marigold_components__WEBPACK_IMPORTED_MODULE_1__.Body, {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_marigold_components__WEBPACK_IMPORTED_MODULE_2__.Headline, {\n                level: \"3\",\n                children: \"Awesome Headline!\"\n            }, void 0, false, {\n                fileName: \"/Users/sebastian/Projects/marigold/docs/content/components/content/headline/headline.demo.tsx\",\n                lineNumber: 5,\n                columnNumber: 5\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_marigold_components__WEBPACK_IMPORTED_MODULE_3__.Text, {\n                children: \"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.\"\n            }, void 0, false, {\n                fileName: \"/Users/sebastian/Projects/marigold/docs/content/components/content/headline/headline.demo.tsx\",\n                lineNumber: 6,\n                columnNumber: 5\n            }, undefined)\n        ]\n    }, void 0, true, {\n        fileName: \"/Users/sebastian/Projects/marigold/docs/content/components/content/headline/headline.demo.tsx\",\n        lineNumber: 4,\n        columnNumber: 3\n    }, undefined));\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNjX2NsaWVudCkvLi9jb250ZW50L2NvbXBvbmVudHMvY29udGVudC9oZWFkbGluZS9oZWFkbGluZS5kZW1vLnRzeCIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0FBQTREO0FBRTVELGlFQUFlLGtCQUNiLDhEQUFDQSxzREFBSUE7OzBCQUNILDhEQUFDQywwREFBUUE7Z0JBQUNFLE9BQU07MEJBQUk7Ozs7OzswQkFDcEIsOERBQUNELHNEQUFJQTswQkFBQzs7Ozs7Ozs7Ozs7aUJBTVYsRUFBRSIsInNvdXJjZXMiOlsid2VicGFjazovL0BtYXJpZ29sZC9kb2NzLy4vY29udGVudC9jb21wb25lbnRzL2NvbnRlbnQvaGVhZGxpbmUvaGVhZGxpbmUuZGVtby50c3g/MTFmYyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBCb2R5LCBIZWFkbGluZSwgVGV4dCB9IGZyb20gJ0BtYXJpZ29sZC9jb21wb25lbnRzJztcblxuZXhwb3J0IGRlZmF1bHQgKCkgPT4gKFxuICA8Qm9keT5cbiAgICA8SGVhZGxpbmUgbGV2ZWw9XCIzXCI+QXdlc29tZSBIZWFkbGluZSE8L0hlYWRsaW5lPlxuICAgIDxUZXh0PlxuICAgICAgTG9yZW0gaXBzdW0gZG9sb3Igc2l0IGFtZXQsIGNvbnNldGV0dXIgc2FkaXBzY2luZyBlbGl0ciwgc2VkIGRpYW0gbm9udW15XG4gICAgICBlaXJtb2QgdGVtcG9yIGludmlkdW50IHV0IGxhYm9yZSBldCBkb2xvcmUgbWFnbmEgYWxpcXV5YW0gZXJhdCwgc2VkIGRpYW1cbiAgICAgIHZvbHVwdHVhLiBBdCB2ZXJvIGVvcyBldCBhY2N1c2FtIGV0IGp1c3RvIGR1byBkb2xvcmVzIGV0IGVhIHJlYnVtLlxuICAgIDwvVGV4dD5cbiAgPC9Cb2R5PlxuKTtcbiJdLCJuYW1lcyI6WyJCb2R5IiwiSGVhZGxpbmUiLCJUZXh0IiwibGV2ZWwiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(sc_client)/./content/components/content/headline/headline.demo.tsx\n");
+
+/***/ })
+
+};
+;

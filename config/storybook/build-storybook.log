@@ -1,0 +1,34 @@
+@storybook/cli v7.0.0-rc.4
+
+info => Cleaning outputDir: /Users/sebastian/Projects/marigold/storybook-static
+WATCHTING THE FOLLOWING PATHS FOR CHANGES:
+[ '/Users/sebastian/Projects/marigold/**/*.stories.tsx' ]
+info => Loading presets
+info => Building manager..
+info => Manager built (129 ms)
+info => Copying static files: /Users/sebastian/Projects/marigold/node_modules/.pnpm/@storybook+manager@7.0.0-rc.4/node_modules/@storybook/manager/static at /Users/sebastian/Projects/marigold/storybook-static/sb-common-assets
+info => Copying static files: /Users/sebastian/Projects/marigold/config/storybook/assets at /Users/sebastian/Projects/marigold/storybook-static/assets
+vite v4.1.4 building for production...
+
+./sb-common-assets/fonts.css doesn't exist at build time, it will remain unchanged to be resolved at runtime
+transforming...
+Use of eval in "../../node_modules/.pnpm/telejson@7.0.4/node_modules/telejson/dist/index.mjs" is strongly discouraged as it poses security risks and may cause issues with minification.
+Use of eval in "../../node_modules/.pnpm/telejson@7.0.4/node_modules/telejson/dist/index.mjs" is strongly discouraged as it poses security risks and may cause issues with minification.
+✓ 1111 modules transformed.
+rendering chunks...
+computing gzip size...
+../storybook-static/iframe.html                                            12.72 kB
+../storybook-static/assets/WithTooltip-5WWCYCAA-6bf392a3.js                 0.22 kB │ gzip:   0.18 kB │ map:     0.11 kB
+../storybook-static/assets/syntaxhighlighter-QTQ2UBB4-511341fc.js           0.23 kB │ gzip:   0.20 kB │ map:     0.12 kB
+../storybook-static/assets/GlobalScrollAreaStyles-XIHNDKUY-039fad65.js     10.19 kB │ gzip:   2.25 kB │ map:    15.71 kB
+../storybook-static/assets/Color-3YIJY6X7-6539cbce.js                      30.76 kB │ gzip:  11.54 kB │ map:   112.40 kB
+../storybook-static/assets/OverlayScrollbars-VAV6LJAB-fffda309.js          58.76 kB │ gzip:  25.19 kB │ map:   277.68 kB
+../storybook-static/assets/axe-fe4f05cb.js                                477.17 kB │ gzip: 125.76 kB │ map: 1,689.37 kB
+../storybook-static/assets/formatter-MGIGMU7Y-d5d3b9a6.js                 601.34 kB │ gzip: 184.96 kB │ map: 1,318.16 kB
+../storybook-static/assets/iframe-f3212e2e.js                           1,870.28 kB │ gzip: 462.07 kB │ map: 5,582.60 kB
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+info => Output directory: /Users/sebastian/Projects/marigold/storybook-static
