@@ -1,4 +1,4 @@
-import { Children, cloneElement, isValidElement, useRef } from 'react';
+import { Children, cloneElement, isValidElement, useMemo, useRef } from 'react';
 import type { ReactElement } from 'react';
 
 import { useAccordion } from '@react-aria/accordion';
@@ -21,21 +21,24 @@ import { AccordionItem } from './AccordionItem';
  * We need to set `hasChildItems` to render ReactNode children, as a workaround.
  * See: https://github.com/adobe/react-spectrum/issues/1989#issuecomment-1372353405
  */
-const parseProps = (props: AccordionProps) => {
-  const children = [] as any;
+const useProps = ({ children, ...props }: AccordionProps) => {
+  children = useMemo(() => {
+    const result = [] as any;
 
-  Children.forEach(props.children, child => {
-    if (isValidElement(child) && typeof child.props?.children !== 'string') {
-      const clone = cloneElement(child, {
-        hasChildItems: false,
-      });
+    Children.forEach(children, child => {
+      if (isValidElement(child) && typeof child.props?.children !== 'string') {
+        const clone = cloneElement(child, {
+          hasChildItems: false,
+        });
 
-      children.push(clone);
-      return;
-    }
+        result.push(clone);
+        return;
+      }
 
-    children.push(child);
-  });
+      result.push(child);
+    });
+    return result;
+  }, [children]);
 
   return {
     ...props,
@@ -54,7 +57,7 @@ export interface AccordionProps
 // Component
 // ---------------
 export const Accordion = (props: AccordionProps) => {
-  props = parseProps(props);
+  props = useProps(props);
 
   const ref = useRef(null);
   const state = useTreeState({

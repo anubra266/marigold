@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 
-import { useAccordionItem } from '@react-aria/accordion';
 import type { AccordionItemAriaProps } from '@react-aria/accordion';
 import { useFocusRing } from '@react-aria/focus';
 import type { AriaFocusRingProps } from '@react-aria/focus';
@@ -12,6 +11,7 @@ import type { TreeState } from '@react-stately/tree';
 import { cn, useClassNames } from '@marigold/system';
 
 import { ChevronDown, ChevronUp } from '../Chevron';
+import { useAccordionItem } from './useAccordionItem';
 
 // Props
 // ---------------
