@@ -11,12 +11,13 @@ import type { TreeState } from '@react-stately/tree';
 import { cn, useClassNames } from '@marigold/system';
 
 import { ChevronDown, ChevronUp } from '../Chevron';
-import { useAccordionItem } from './useAccordionItem';
+import { UseAccordionItemProps, useAccordionItem } from './useAccordionItem';
 
 // Props
 // ---------------
 export interface AccordionItemProps
   extends AccordionItemAriaProps<object>,
+    UseAccordionItemProps<object>,
     AriaFocusRingProps {
   state: TreeState<object>;
   variant?: string;

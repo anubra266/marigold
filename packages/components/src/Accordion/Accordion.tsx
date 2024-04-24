@@ -1,5 +1,13 @@
-import { Children, cloneElement, isValidElement, useMemo, useRef } from 'react';
-import type { ReactElement } from 'react';
+import {
+  Children,
+  cloneElement,
+  isValidElement,
+  useCallback,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
+import type { Key, ReactElement } from 'react';
 
 import { useAccordion } from '@react-aria/accordion';
 import type { AriaAccordionProps } from '@react-aria/accordion';
@@ -60,11 +68,21 @@ export const Accordion = (props: AccordionProps) => {
   props = useProps(props);
 
   const ref = useRef(null);
+  const [focusedKey, setFocusedKey] = useState<Key | null>(null);
+
   const state = useTreeState({
     selectionMode: 'single',
     ...props,
   });
+  state.selectionManager.setFocusedKey = (key: Key | null) => {
+    setFocusedKey(key);
+  };
+
   const { accordionProps } = useAccordion(props, state, ref);
+
+  const updateFocus = useCallback((isFocused: boolean, key: Key | null) => {
+    isFocused && setFocusedKey(key);
+  }, []);
 
   return (
     <div {...accordionProps} ref={ref}>
@@ -75,6 +93,8 @@ export const Accordion = (props: AccordionProps) => {
           state={state}
           variant={item.props.variant}
           size={item.props.size}
+          focusedKey={focusedKey}
+          onFocusChange={updateFocus}
         />
       ))}
     </div>

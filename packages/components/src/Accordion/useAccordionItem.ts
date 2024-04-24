@@ -16,7 +16,7 @@ import { useCallback, useEffect } from 'react';
 import type { AccordionItemAriaProps } from '@react-aria/accordion';
 import { useButton } from '@react-aria/button';
 import { focusSafely } from '@react-aria/focus';
-import { useId } from '@react-aria/utils';
+import { mergeProps, useId } from '@react-aria/utils';
 
 import type { TreeState } from '@react-stately/tree';
 
@@ -29,6 +29,17 @@ import type {
 
 // Props
 // ---------------
+export interface UseAccordionItemProps<T> extends AccordionItemAriaProps<T> {
+  /**
+   * Current focused key.
+   */
+  focusedKey: React.Key | null;
+  /**
+   * Callback fired when the focus state changes.
+   */
+  onFocusChange?: (isFocused: boolean, key: React.Key) => void;
+}
+
 export interface AccordionItemAria {
   /** Props for the accordion item button. */
   buttonProps: ButtonHTMLAttributes<HTMLElement>;
@@ -39,7 +50,7 @@ export interface AccordionItemAria {
 // Hook
 // ---------------
 export const useAccordionItem = <T>(
-  props: AccordionItemAriaProps<T>,
+  props: UseAccordionItemProps<T>,
   state: TreeState<T> & {
     focusedKey?: Key | null;
   },
@@ -48,7 +59,7 @@ export const useAccordionItem = <T>(
   const buttonId = useId();
   const regionId = useId();
 
-  const { item } = props;
+  const { item, onFocusChange } = props;
   const key = item.key;
   const manager = state.selectionManager;
   const disabled = state.disabledKeys.has(item.key);
@@ -57,7 +68,8 @@ export const useAccordionItem = <T>(
    * Focus the associated DOM node when this item becomes the focusedKey
    */
   useEffect(() => {
-    let isFocused = key === state.focusedKey;
+    console.log('effect', state.focusedKey);
+    const isFocused = key === state.focusedKey;
 
     if (isFocused && document.activeElement !== ref.current) {
       ref.current && focusSafely(ref.current);
@@ -79,11 +91,11 @@ export const useAccordionItem = <T>(
   );
 
   const extendFocusSelection = useCallback(
-    (toKey: Key) => {
+    (key: Key) => {
       if (manager.selectionBehavior === 'replace') {
-        manager.extendSelection(toKey);
+        manager.extendSelection(key);
       }
-      manager.setFocusedKey(toKey);
+      manager.setFocusedKey(key);
     },
     [manager]
   );
@@ -147,11 +159,19 @@ export const useAccordionItem = <T>(
     ref
   );
 
+  const onFocus = useCallback(() => {
+    onFocusChange?.(true, item.key);
+  }, [item.key, onFocusChange]);
+
+  const onBlur = useCallback(() => {
+    onFocusChange?.(false, item.key);
+  }, [item.key, onFocusChange]);
+
   const expanded = state.selectionManager.isSelected(item.key);
 
   return {
     buttonProps: {
-      ...buttonProps,
+      ...mergeProps(buttonProps, { onFocus, onBlur }),
       'aria-expanded': expanded,
       'aria-controls': expanded ? regionId : undefined,
     },
