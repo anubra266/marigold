@@ -14,7 +14,7 @@ import { AccordionItem } from './AccordionItem';
 // Herlps
 // ---------------
 /**
- * We need to manually set `hasChildItems` to false, otherwhise this crashes.
+ * We need to set `hasChildItems` to render ReactNode children, as a workaround.
  * See: https://github.com/adobe/react-spectrum/issues/1989#issuecomment-1372353405
  */
 const parseProps = (props: AccordionProps) => {
