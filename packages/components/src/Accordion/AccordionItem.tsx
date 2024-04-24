@@ -36,7 +36,7 @@ export const AccordionItem = ({
     state,
     ref
   );
-  const open = state.expandedKeys.has(item.key);
+  const expanded = state.expandedKeys.has(item.key);
   const disabled = state.disabledKeys.has(item.key);
 
   /** is this needed?  */
@@ -62,13 +62,16 @@ export const AccordionItem = ({
         data-focus-visible={isFocusVisible || undefined}
       >
         {item.props.title}
-        {true /** expanded */ ? (
+        {expanded ? (
           <ChevronUp className="h3 w-6" aria-hidden="true" />
         ) : (
           <ChevronDown className="h3 w-6" aria-hidden="true" />
         )}
       </button>
-      <div {...regionProps} /** expanded classname */>
+      <div
+        {...regionProps}
+        className={cn(classNames.item, !expanded && 'hidden')}
+      >
         {item.props.children}
       </div>
     </div>

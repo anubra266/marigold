@@ -25,7 +25,6 @@ export interface AccordionProps
 }
 
 export const Accordion = ({ children, ...props }: AccordionProps) => {
-  console.log(children);
   const ownProps = {
     ...props,
     // we have to do this because JSX childs are not supported

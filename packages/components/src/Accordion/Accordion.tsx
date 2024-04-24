@@ -7,7 +7,11 @@ import type { AriaAccordionProps } from '@react-aria/accordion';
 import { Item } from '@react-stately/collections';
 import { useTreeState } from '@react-stately/tree';
 
-import type { ItemElement, ItemProps } from '@react-types/shared';
+import type {
+  ItemElement,
+  ItemProps,
+  SelectionMode,
+} from '@react-types/shared';
 
 import { AccordionItem } from './AccordionItem';
 
@@ -44,6 +48,7 @@ const parseProps = (props: AccordionProps) => {
 export interface AccordionProps
   extends Omit<AriaAccordionProps<object>, 'children'> {
   children: ItemElement<object>[] | ItemElement<object>;
+  selectionMode?: SelectionMode;
 }
 
 // Component
