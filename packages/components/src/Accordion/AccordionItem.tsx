@@ -1,104 +1,74 @@
-import { ReactNode, useEffect, useRef } from 'react';
+import { useRef } from 'react';
 
+import { useAccordionItem } from '@react-aria/accordion';
+import type { AccordionItemAriaProps } from '@react-aria/accordion';
 import { useFocusRing } from '@react-aria/focus';
+import type { AriaFocusRingProps } from '@react-aria/focus';
+import { useHover } from '@react-aria/interactions';
 import { mergeProps } from '@react-aria/utils';
 
-import { TreeState } from '@react-stately/tree';
+import type { TreeState } from '@react-stately/tree';
 
-import { Node } from '@react-types/shared';
-
-import { cn, useClassNames, useStateProps } from '@marigold/system';
+import { cn, useClassNames } from '@marigold/system';
 
 import { ChevronDown, ChevronUp } from '../Chevron';
-import { useAccordionItem } from './useAccordionItem';
 
-// props
-// ----------------
-export interface AccordionItemProps {
-  item: Node<object>;
+// Props
+// ---------------
+export interface AccordionItemProps
+  extends AccordionItemAriaProps<object>,
+    AriaFocusRingProps {
   state: TreeState<object>;
-  title: string | ReactNode;
   variant?: string;
   size?: string;
 }
 
-// component
-// ---------------
 export const AccordionItem = ({
-  item,
-  state,
-  title,
   variant,
   size,
   ...props
 }: AccordionItemProps) => {
+  const { state, item } = props;
+
   const ref = useRef<HTMLButtonElement>(null);
-
-  const defaultExpanded = Array.from(state.expandedKeys).some(key => {
-    return key.toString() === item.key.toString().replace('.$', '');
-  });
-
-  const expanded = state.selectionManager.isSelected(item.key);
-
-  useEffect(() => {
-    // clear both default values and expanded also check if multiple or single mode
-    if (defaultExpanded) {
-      if (state.selectionManager.selectionMode === 'multiple') {
-        state.selectionManager.setSelectedKeys([
-          ...state.selectionManager.selectedKeys,
-          item.key,
-        ]);
-      } else {
-        state.expandedKeys.clear();
-        state.selectionManager.toggleSelection(item.key);
-      }
-    }
-  }, [defaultExpanded, item.key, state.expandedKeys, state.selectionManager]);
-
-  // we have to use or own hook because it's in react-aria still issues
-  const { buttonProps, regionProps } = useAccordionItem(
-    {
-      item,
-    },
+  const { buttonProps, regionProps } = useAccordionItem<object>(
+    props,
     state,
     ref
   );
+  const open = state.expandedKeys.has(item.key);
+  const disabled = state.disabledKeys.has(item.key);
 
-  const { isFocusVisible, focusProps } = useFocusRing();
-
-  const stateProps = useStateProps({
-    focus: isFocusVisible,
-    expanded: defaultExpanded || expanded,
-  });
+  /** is this needed?  */
+  const { focusProps, isFocused, isFocusVisible } = useFocusRing(props);
+  const { isHovered, hoverProps } = useHover({ isDisabled: disabled });
 
   const classNames = useClassNames({ component: 'Accordion', variant, size });
 
   return (
-    <div className="flex flex-col" {...props}>
+    <div className="flex flex-col">
       <button
         className={cn(
           'inline-flex items-center justify-center gap-[0.5ch]',
           classNames.button
         )}
-        {...mergeProps(buttonProps, stateProps, props)}
+        {...mergeProps(buttonProps, focusProps)}
         ref={ref}
         aria-label={item.textValue}
+        data-disabled={disabled || undefined}
+        // data-pressed={ctx.isPressed || isPressed || undefined}
+        data-hovered={isHovered || undefined}
+        data-focused={isFocused || undefined}
+        data-focus-visible={isFocusVisible || undefined}
       >
-        {title}
-        {expanded ? (
-          <ChevronUp className="h3 w-6" />
+        {item.props.title}
+        {true /** expanded */ ? (
+          <ChevronUp className="h3 w-6" aria-hidden="true" />
         ) : (
-          <ChevronDown className="h3 w-6" />
+          <ChevronDown className="h3 w-6" aria-hidden="true" />
         )}
       </button>
-      <div
-        {...mergeProps(regionProps, focusProps, stateProps)}
-        className={
-          expanded || defaultExpanded
-            ? classNames.item
-            : cn(classNames.item, 'hidden')
-        }
-      >
+      <div {...regionProps} /** expanded classname */>
         {item.props.children}
       </div>
     </div>
