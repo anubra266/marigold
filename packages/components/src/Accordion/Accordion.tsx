@@ -74,6 +74,7 @@ export const Accordion = (props: AccordionProps) => {
     selectionMode: 'single',
     ...props,
   });
+  // TODO: shouldn't this set the focused key in the manager!?
   state.selectionManager.setFocusedKey = (key: Key | null) => {
     setFocusedKey(key);
   };
