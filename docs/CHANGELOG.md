@@ -1,5 +1,19 @@
 # @marigold/docs
 
+## 7.8.3
+
+### Patch Changes
+
+- [#3937](https://github.com/marigold-ui/marigold/pull/3937) [`2658e2f`](https://github.com/marigold-ui/marigold/commit/2658e2f075c9aaae89b5817a864313f887c1a8fe) Thanks [@sarahgm](https://github.com/sarahgm)! - [DSTSUP-79]feat: add new icon for download
+
+- Updated dependencies [[`2658e2f`](https://github.com/marigold-ui/marigold/commit/2658e2f075c9aaae89b5817a864313f887c1a8fe)]:
+  - @marigold/icons@1.2.52
+  - @marigold/components@7.8.3
+  - @marigold/theme-preset@1.3.17
+  - @marigold/theme-b2b@27.1.12
+  - @marigold/theme-core@26.1.12
+  - @marigold/theme-docs@2.0.2
+
 ## 7.8.2
 
 ### Patch Changes

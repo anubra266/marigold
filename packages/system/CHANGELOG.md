@@ -1,5 +1,11 @@
 # @marigold/system
 
+## 7.8.3
+
+### Patch Changes
+
+- [#3941](https://github.com/marigold-ui/marigold/pull/3941) [`3f7a4ec`](https://github.com/marigold-ui/marigold/commit/3f7a4ec80a4b56fea3c63e44b71ad86fa36e3d75) Thanks [@sarahgm](https://github.com/sarahgm)! - [DSTSUP-78]fix: fix extendTheme function
+
 ## 7.8.2
 
 ## 7.8.1

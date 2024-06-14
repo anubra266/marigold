@@ -1,5 +1,14 @@
 # @marigold/icons
 
+## 1.2.52
+
+### Patch Changes
+
+- [#3937](https://github.com/marigold-ui/marigold/pull/3937) [`2658e2f`](https://github.com/marigold-ui/marigold/commit/2658e2f075c9aaae89b5817a864313f887c1a8fe) Thanks [@sarahgm](https://github.com/sarahgm)! - [DSTSUP-79]feat: add new icon for download
+
+- Updated dependencies [[`3f7a4ec`](https://github.com/marigold-ui/marigold/commit/3f7a4ec80a4b56fea3c63e44b71ad86fa36e3d75)]:
+  - @marigold/system@7.8.3
+
 ## 1.2.51
 
 ### Patch Changes
